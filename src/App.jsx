@@ -20,8 +20,9 @@ function App() {
 //Conectar con el backend
   useEffect(() => {
     async function fetchData() {
-        const response = await fetch('https://backendtodolist-g9j4.onrender.com/todos');
+        const response = await fetch('https://todolist-oowd.onrender.com/todos');
         const data = await response.json(); 
+        console.log(data)
         setTodoList(data);
     }
 
