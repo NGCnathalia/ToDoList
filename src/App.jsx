@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css"
 
 import Form from "./components/Form";
@@ -17,6 +17,19 @@ const list = [
 ];
 function App() {
   const [todoList, setTodoList] = useState(list);
+//Conectar con el backend
+  useEffect(() => {
+    async function fetchData() {
+        const response = await fetch('http://localhost:3030/todos/');
+        const data = await response.json(); 
+        setTodoList(data);
+    }
+
+    fetchData();
+}, []);
+//conectar con el backend
+
+
 
   const addTodo = (item) => {
     setTodoList((oldlist) => [...oldlist, item]);
