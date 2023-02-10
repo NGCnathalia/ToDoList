@@ -22,3 +22,25 @@ html{
     background-color: #F95738;
     color: white;
 }
+
+@media (min-width: 744px) {
+  .title {
+      font-size: 70px;
+      line-height: 80px;
+    }
+    #list{
+      font-size: 27px;
+      line-height: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .title {
+      
+      font-size: 85px;
+      line-height: 80px;
+    }
+    #list{
+      font-size: 35px;
+      line-height: 45px;
+  }
+}

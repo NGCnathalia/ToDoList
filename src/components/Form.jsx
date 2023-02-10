@@ -21,7 +21,7 @@ export const Form = ({ addTodo }) => {
         <form className="ui form" onSubmit={handleFormSubmit}>
             <div className="ui grid center aligned">
                 <div className="row">
-                    <div className="column six wide">
+                    <div className="column nine wide">
                         <input
                             value={inputValue}
                             onChange={handleInputChange}
