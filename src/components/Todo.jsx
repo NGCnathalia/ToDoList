@@ -50,13 +50,13 @@ const Todo = ({ title, completed, removeTodoItemProp }) => {
 
                         <div className="column three wide">
                             <button
-                                className={"ui button circular icon" + (completedState ? " blue " : " green ")}
+                                className={"ui button square icon" + (completedState ? " blue " : " green ")}
                                 onClick={handleButtonClick}
                             >
                                 <i className="white check icon"></i></button>
                         </div>
                         <div className="column three wide">
-                            <button onClick={removeTodoItemProp} className="ui button circular icon red"><i className="white remove icon"></i></button>
+                            <button onClick={removeTodoItemProp} className="ui button square icon red"><i className="white remove icon"></i></button>
                         </div>
                     </>
             }

@@ -4,7 +4,7 @@ import "./App.css"
 import Form from "./components/Form";
 import List from "./components/List";
 import  Section  from "./components/Section";
-
+import Footer from "./components/Footer";
 const appTitle = "To Do List";
 
 const list = [
@@ -58,6 +58,11 @@ function App() {
       <Section>
         <List list={todoList} removeTodoListProp={removeTodo} />
       </Section>
+      
+      
+        <Footer/>
+      
+
     </div>
   );
 }

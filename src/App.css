@@ -22,6 +22,21 @@ html{
     background-color: #F95738;
     color: white;
 }
+.Footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+  height: 80px;
+}
+.Footer-text h3{
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+}
 
 @media (min-width: 744px) {
   .title {
@@ -32,6 +47,10 @@ html{
       font-size: 27px;
       line-height: 35px;
   }
+  .Footer-text h3{
+    font-size: 18px;
+    line-height: 16px;
+}
 }
 @media (min-width: 1024px) {
   .title {
@@ -43,4 +62,8 @@ html{
       font-size: 35px;
       line-height: 45px;
   }
+  .Footer-text h3{
+    font-size: 25px;
+    line-height: 16px;
+}
 }

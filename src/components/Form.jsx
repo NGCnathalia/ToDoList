@@ -30,7 +30,7 @@ export const Form = ({ addTodo }) => {
                         />
                     </div>
                     <div className="column one wide">
-                        <button type="submit" className="ui button circular icon green"><i className="white plus icon"></i>
+                        <button type="submit" className="ui button rectangle icon black"><i className="white plus icon"></i>
                         </button>
                     </div>
                 </div>
