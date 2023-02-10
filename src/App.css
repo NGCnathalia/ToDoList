@@ -26,13 +26,13 @@ html{
   display: flex;
   justify-content: center;
   align-items: center;
-  
   width: 100%;
   height: 80px;
 }
 .Footer-text h3{
   font-family: 'Itim';
   font-style: normal;
+  margin-top: auto;
   font-weight: 400;
   font-size: 11px;
   line-height: 16px;
