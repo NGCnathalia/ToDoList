@@ -1,34 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React, { useState } from "react";
+import "./App.css"
 
+import Form from "./components/Form";
+import List from "./components/List";
+import  Section  from "./components/Section";
+
+const appTitle = "To Do List";
+
+const list = [
+  { title: "test #1", completed: false, id: 1 },
+  { title: "test #2", id: 2 },
+  { title: "test #3", id: 3 },
+  // { title: "test #4", id: 4 },
+  // { title: "test #5", id: 5 },
+  // { title: "test #6", id: 6 },
+];
 function App() {
-  const [count, setCount] = useState(0)
+  const [todoList, setTodoList] = useState(list);
 
+  const addTodo = (item) => {
+    setTodoList((oldlist) => [...oldlist, item]);
+  };
+
+  const removeTodo = (id) => {
+    setTodoList((oldlist) =>
+      oldlist.filter((item) => {
+        return item.id !== id;
+      })
+    );
+  };
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="ui container center aligned fluid">
+    
+      <Section>
+          <h1 className="title">
+            {appTitle}
+          </h1>
+      </Section>
+
+      <Section>
+        <Form addTodo={addTodo} />
+      </Section>
+      
+      <Section>
+        <List list={todoList} removeTodoListProp={removeTodo} />
+      </Section>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

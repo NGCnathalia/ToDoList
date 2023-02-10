@@ -1,7 +1,11 @@
 import React from 'react'
 
-export const Section = () => {
+const Section = ({ children }) => {
   return (
-    <div>Section</div>
+    <div style={{margin: "30px"}}> 
+        {children}
+    </div>
   )
 }
+
+export default Section;
